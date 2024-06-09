@@ -2,10 +2,10 @@
 (Display pyramid) Write a program that prompts the user to enter an integer from
 1 to 15 and displays a pyramid, as shown in the following sample run:
 */  
-  import java.util.Scanner;
+import java.util.Scanner;
 
  
-public class Pyramid
+public class pyramid
 {
   
 public static void main (String[]args)
@@ -14,12 +14,15 @@ public static void main (String[]args)
 	  // Create a Scanner object because we need to accept input from the user 
 	  Scanner input = new Scanner (System.in);
 	
- 
+
+            
 	  // Prompt the user to enter an integer from 1 to 15 
 	  System.out.print ("Enter the number of lines for the pyramid: ");
 	
       int lines = input.nextInt ();
-	
+	 if (lines < 1 || lines > 15) {
+            System.out.println("Invalid input! Please enter an integer between 1 and 15.");
+        } else {
  // we need nested for loop to make the pyramid 
 	  // Display pyramid
 	  for (int rows = 1; rows <= lines; rows++)
@@ -48,7 +51,7 @@ System.out.print (i + " ");
 } 
 		  // End line
 		  System.out.println ();
-
+}
 } 
 } 
 }
